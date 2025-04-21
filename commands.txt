@@ -4,4 +4,6 @@ docker run --publish 8000:8000 python-django
 
 # part 2
 docker-compose build
-docker compose run --rm app django-admin startproject core .
+docker compose run --rm app django-admin startproject django_docker .
+docker compose run --rm app python manage.py startapp core
+docker compose run --rm app python manage.py migrate
