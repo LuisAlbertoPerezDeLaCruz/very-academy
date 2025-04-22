@@ -10,3 +10,10 @@ docker compose up
 # extras
 # docker compose run --rm app python manage.py startapp core
 # docker compose run --rm app python manage.py migrate
+
+# part 3
+docker-compose build
+docker compose run --rm app django-admin startproject django_docker .
+docker compose up
+docker exec -it <container-id> /bin/bash
+docker exec -it django_app /bin/bash
