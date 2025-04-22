@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/django_app
+    ports:
+      - "8001:8001"
+    image: app:django_app
+    container_name: django_app_container_folder
+    command: python manage.py runserver 0.0.0.0:8001
+
