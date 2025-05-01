@@ -1,2 +1,8 @@
+# Genera la imagen
 docker build --tag python-django .
+
+# Genera el contenedor desde la imagen creada
 docker run --publish 8000:8000 python-django
+
+# Para entrar dentro del contenedor en el command bash
+docker exec -it <container-id> /bin/bash
