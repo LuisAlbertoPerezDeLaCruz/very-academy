@@ -16,4 +16,4 @@ docker-compose build
 docker compose run --rm app django-admin startproject django_docker .
 docker compose up
 docker exec -it <container-id> /bin/bash
-docker exec -it django_app /bin/bash
+docker exec -it django_app_container /bin/bash
