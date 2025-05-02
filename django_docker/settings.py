@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5mu#^mi%omuj4jd%s(m3vkjs2id5m#4u^-#2%c)9ck@3+p%^+!"
+SECRET_KEY = "django-insecure-yjde9+b5(03t)!%d1t^nrc2e38uj6*m5rudiykl1f2)-ew2hnt"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,13 +75,14 @@ WSGI_APPLICATION = "django_docker.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
+        "NAME": "django_db",
         "USER": "postgres",
         "PASSWORD": "postgres",
-        "HOST": "db",  # Use the service name defined in docker-compose.yml
-        "PORT": "5432",  # Default PostgreSQL port
+        "HOST": "db",  # <--- must be 'db' to reach the Postgres container
+        "PORT": "5432",
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
